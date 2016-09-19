@@ -8,14 +8,24 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    byebug (9.0.5)
+    coderay (1.1.1)
     diff-lcs (1.2.5)
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     json (1.8.3)
+    method_source (0.8.2)
     mime-types (2.6.1)
     netrc (0.10.3)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (3.4.0)
+      byebug (~> 9.0)
+      pry (~> 0.10)
     rake (10.4.2)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
@@ -34,6 +44,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
+    slop (3.6.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
@@ -44,8 +55,10 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.6)
   payeezy!
+  pry
+  pry-byebug
   rake
   rspec
 
 BUNDLED WITH
-   1.10.4
+   1.12.5

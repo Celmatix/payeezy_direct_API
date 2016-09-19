@@ -26,10 +26,11 @@ describe "Sample calls to Payeezy" do
       printf "token Value is = %s\n", @token_response['value']
     end
   end
-  
+
   describe "Execute Primary Transactions" do
     it 'Authorize Transaction' do
       @primary_response = @payeezy.transact(:authorize,primary_tx_payload)
+      binding.pry
       @primary_response['transaction_status'].should == "approved"
     end
 
@@ -128,14 +129,14 @@ describe "Sample calls to Payeezy" do
       @secondary_response['transaction_status'].should == "approved"
     end
   end
-  
+
   def tokenize_tx_payload
     credit_card = {}
     payload = {}
     payload[:type] = 'FDToken'
     payload[:auth]='false'
     payload[:ta_token]='NOIW'
-   
+
 
     credit_card[:type] = 'visa'
     credit_card[:cardholder_name] = 'John Smith'
